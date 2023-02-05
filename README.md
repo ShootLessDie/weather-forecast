@@ -6,12 +6,12 @@ Knowing the weather beforehand can be vital to be able to plan things into advan
 
 ## Usage
 
-The deployed application can be accessed on : https://shootlessdie.github.io/work-day-scheduler/
+The deployed application can be accessed on : https://shootlessdie.github.io/weather-forecast/
 
 And it looks like this.
 
 <p>
-    <img alt= "Screenshot of web application" src="./10-server-side-apis-challenge-demo.png"/>
+    <img alt= "Screenshot of web application" src="./Screenshot 2023-02-05 213346.jpg"/>
 </p>
 
 ## License
