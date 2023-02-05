@@ -90,7 +90,9 @@ async function weatherCall(cityName) {
   <div class="col">
   <div class="card-body bg-secondary rounded">
   <h5>${weatherArray[2].date}</h5>
-  <img src="https://openweathermap.org/img/w/${weatherArray[2].weatherIcon}.png">
+  <img src="https://openweathermap.org/img/w/${
+    weatherArray[2].weatherIcon
+  }.png">
   <p class="card-text">Temp: ${weatherArray[2].temp.toFixed(2)} °C</p>
   <p class="card-text">Wind: ${weatherArray[2].wind.toFixed(2)} °KPH</p>
   <p class="card-text">Humidity: ${weatherArray[2].humidity} %</p>
