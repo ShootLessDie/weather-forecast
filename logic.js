@@ -63,7 +63,7 @@ async function weatherCall(cityName) {
 
   $("#currentWeatherIcon").attr(
     "src",
-    `http://openweathermap.org/img/w/${weatherArray[0].weatherIcon}.png`
+    `https://openweathermap.org/img/w/${weatherArray[0].weatherIcon}.png`
   );
 
   // Use most recent weather info for today's display
@@ -78,7 +78,7 @@ async function weatherCall(cityName) {
   <div class="col">
   <div class="card-body bg-secondary rounded">
     <h5>${weatherArray[1].date}</h5>
-    <img src="http://openweathermap.org/img/w/${
+    <img src="https://openweathermap.org/img/w/${
       weatherArray[1].weatherIcon
     }.png">
     <p class="card-text">Temp: ${weatherArray[1].temp.toFixed(2)} °C</p>
@@ -90,7 +90,7 @@ async function weatherCall(cityName) {
   <div class="col">
   <div class="card-body bg-secondary rounded">
   <h5>${weatherArray[2].date}</h5>
-  <img src="http://openweathermap.org/img/w/${weatherArray[2].weatherIcon}.png">
+  <img src="https://openweathermap.org/img/w/${weatherArray[2].weatherIcon}.png">
   <p class="card-text">Temp: ${weatherArray[2].temp.toFixed(2)} °C</p>
   <p class="card-text">Wind: ${weatherArray[2].wind.toFixed(2)} °KPH</p>
   <p class="card-text">Humidity: ${weatherArray[2].humidity} %</p>
@@ -100,7 +100,7 @@ async function weatherCall(cityName) {
 <div class="col">
 <div class="card-body bg-secondary rounded">
 <h5>${weatherArray[3].date}</h5>
-<img src="http://openweathermap.org/img/w/${weatherArray[3].weatherIcon}.png">
+<img src="https://openweathermap.org/img/w/${weatherArray[3].weatherIcon}.png">
 <p class="card-text">Temp: ${weatherArray[3].temp.toFixed(2)} °C</p>
 <p class="card-text">Wind: ${weatherArray[3].wind.toFixed(2)} °KPH</p>
 <p class="card-text">Humidity: ${weatherArray[3].humidity} %</p>
@@ -110,7 +110,7 @@ async function weatherCall(cityName) {
 <div class="col">
 <div class="card-body bg-secondary rounded">
 <h5>${weatherArray[4].date}</h5>
-<img src="http://openweathermap.org/img/w/${weatherArray[4].weatherIcon}.png">
+<img src="https://openweathermap.org/img/w/${weatherArray[4].weatherIcon}.png">
 <p class="card-text">Temp: ${weatherArray[4].temp.toFixed(2)} °C</p>
 <p class="card-text">Wind: ${weatherArray[4].wind.toFixed(2)} °KPH</p>
 <p class="card-text">Humidity: ${weatherArray[4].humidity} %</p>
@@ -120,7 +120,7 @@ async function weatherCall(cityName) {
 <div class="col">
 <div class="card-body bg-secondary rounded">
 <h5>${weatherArray[5].date}</h5>
-<img src="http://openweathermap.org/img/w/${weatherArray[5].weatherIcon}.png">
+<img src="https://openweathermap.org/img/w/${weatherArray[5].weatherIcon}.png">
 <p class="card-text">Temp: ${weatherArray[5].temp.toFixed(2)} °C</p>
 <p class="card-text">Wind: ${weatherArray[5].wind.toFixed(2)} °KPH</p>
 <p class="card-text">Humidity: ${weatherArray[5].humidity} %</p>
@@ -130,7 +130,7 @@ async function weatherCall(cityName) {
 }
 
 async function getLocation(location) {
-  let queryURL = `http://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=1&appid=${apiKey}`;
+  let queryURL = `https://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=1&appid=${apiKey}`;
 
   let response = await fetch(queryURL);
   const responseJson = await response.json();
@@ -149,7 +149,7 @@ async function getLocation(location) {
 async function getWeather(cityLon, cityLat) {
   // Clear weatherarray
   weatherArray = [];
-  let queryURL = `http://api.openweathermap.org/data/2.5/forecast?lat=${cityLon}&lon=${cityLat}&appid=${apiKey}`;
+  let queryURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${cityLon}&lon=${cityLat}&appid=${apiKey}`;
   console.log(queryURL);
 
   let response = await fetch(queryURL);
